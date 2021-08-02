@@ -39,25 +39,28 @@ class MoviesPage extends React.Component {
       <MoviePageStyled>
         <SearchForm onSubmit={this.onSearchSubmit} />
         <ul className="moviesSearchList">
-          {foundMovies.map((movie) => (
-            <li className="movieSearchItem" key={movie.id}>
-              <Link
-                className="movieSearchLink"
-                to={{
-                  pathname: `/movies/${movie.id}`,
-                  state: {
-                    from: this.props.location, //передаем целый location в окно MovieDetailsPage
-                  },
-                }}
-              >
-                <img
-                  className="movieSearchImage"
-                  src={`https://www.themoviedb.org/t/p/w300${movie.poster_path}`}
-                  alt={movie.title}
-                />
-              </Link>
-            </li>
-          ))}
+          {foundMovies.map(
+            (movie) =>
+              movie.poster_path && (
+                <li className="movieSearchItem" key={movie.id}>
+                  <Link
+                    className="movieSearchLink"
+                    to={{
+                      pathname: `/movies/${movie.id}`,
+                      state: {
+                        from: this.props.location, //передаем целый location в окно MovieDetailsPage
+                      },
+                    }}
+                  >
+                    <img
+                      className="movieSearchImage"
+                      src={`https://www.themoviedb.org/t/p/w300${movie.poster_path}`}
+                      alt={movie.title}
+                    />
+                  </Link>
+                </li>
+              )
+          )}
         </ul>
       </MoviePageStyled>
     );
