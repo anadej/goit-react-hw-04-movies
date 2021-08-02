@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { fetchMovieCredits } from "../../services/api";
 import { CastStyled } from "./CastStyled";
+import deffImg from "../../images/no_image.png";
 
 class Cast extends Component {
   state = {
@@ -28,9 +29,9 @@ class Cast extends Component {
               <img
                 className="movieCastImage"
                 src={
-                  cast.profile_path !== null
+                  cast.profile_path
                     ? `https://www.themoviedb.org/t/p/w300${cast.profile_path}`
-                    : "../../images/no_image.png"
+                    : deffImg
                 }
                 alt={cast.original_name}
               />

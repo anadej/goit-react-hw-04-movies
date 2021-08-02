@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import Loader from "react-loader-spinner";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import Cast from "../components/movieCast/Cast";
 import Review from "../components/movieReview/Review";
 import { fetchDetailsMovie } from "../services/api";
@@ -79,9 +79,8 @@ class MovieDetailsPage extends React.Component {
                 Cast
               </Link>
             </li>
-            <li>
+            <li className="movieCastReviewsItem">
               <Link
-                className="movieDetailsInfo"
                 to={{
                   pathname: `/movies/${match.params.id}/reviews`,
                   state: {
@@ -94,42 +93,22 @@ class MovieDetailsPage extends React.Component {
             </li>
           </ul>
         </div>
-        {location.pathname === `/movies/${match.params.id}/cast` && (
-          <div>
-            <Suspense
-              fallback={
-                <div className="loader">
-                  <Loader
-                    type="ThreeDots"
-                    color="#00BFFF"
-                    height={80}
-                    width={80}
-                  />
-                </div>
-              }
-            >
-              <Cast movieId={match.params.id} />
-            </Suspense>
-          </div>
-        )}
-        {location.pathname === `/movies/${match.params.id}/reviews` && (
-          <div>
-            <Suspense
-              fallback={
-                <div className="loader">
-                  <Loader
-                    type="ThreeDots"
-                    color="#00BFFF"
-                    height={80}
-                    width={80}
-                  />
-                </div>
-              }
-            >
-              <Review movieId={match.params.id} />
-            </Suspense>
-          </div>
-        )}
+        <Suspense
+          fallback={
+            <div className="loader">
+              <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+            </div>
+          }
+        >
+          <Route
+            path={`/movies/${match.params.id}/cast`}
+            render={() => <Cast movieId={match.params.id} />}
+          />
+          <Route
+            path={`/movies/${match.params.id}/reviews`}
+            render={() => <Review movieId={match.params.id} />}
+          />
+        </Suspense>
       </MovieDetailsPageStyled>
     );
   }

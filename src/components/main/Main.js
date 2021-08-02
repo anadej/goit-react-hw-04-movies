@@ -1,9 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import Loader from "react-loader-spinner";
 import { Route, Switch } from "react-router-dom";
-// import HomePage from "../../pages/HomePage";
-// import MovieDetailsPage from "../../pages/MovieDetailsPage";
-// import MoviesPage from "../../pages/MoviesPage";
 import MainStyled from "./MainStyled";
 
 const HomePage = lazy(() =>

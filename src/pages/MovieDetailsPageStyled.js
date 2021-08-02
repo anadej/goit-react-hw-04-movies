@@ -38,12 +38,21 @@ export const MovieDetailsPageStyled = styled.div`
   }
 
   .movieCastReviewsList {
+    display: flex;
+    text-decoration: none;
     margin-top: 20px;
-    padding-left: 40px;
+    padding-left: 20px;
   }
 
   .movieCastReviewsItem {
-    margin-bottom: 10px;
+    a {
+      padding: 5px 10px;
+      border: 3px solid #3f51b5;
+      background-color: #3f51b5;
+      color: #fff;
+      text-decoration: none;
+    }
+    margin-left: 20px;
   }
 
   button {
