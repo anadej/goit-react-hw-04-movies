@@ -1,10 +1,19 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import Loader from "react-loader-spinner";
 import { Link, Route } from "react-router-dom";
-import Cast from "../components/movieCast/Cast";
-import Review from "../components/movieReview/Review";
 import { fetchDetailsMovie } from "../services/api";
 import { MovieDetailsPageStyled } from "./MovieDetailsPageStyled";
+
+const Cast = lazy(() =>
+  import(
+    "../components/movieCast/Cast" /* webpackChunkName: "movie-cast-info" */
+  )
+);
+const Review = lazy(() =>
+  import(
+    "../components/movieReview/Review" /* webpackChunkName: "movie-reviews-info" */
+  )
+);
 
 class MovieDetailsPage extends React.Component {
   state = {};

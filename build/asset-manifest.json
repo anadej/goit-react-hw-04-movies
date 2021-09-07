@@ -4,15 +4,15 @@
     "static/js/0.b895885b.chunk.js.map": "/static/js/0.b895885b.chunk.js.map",
     "home-trend-movies.js": "/static/js/home-trend-movies.caf69a47.chunk.js",
     "home-trend-movies.js.map": "/static/js/home-trend-movies.caf69a47.chunk.js.map",
-    "movies-search-page.js": "/static/js/movies-search-page.3c21fa1a.chunk.js",
-    "movies-search-page.js.map": "/static/js/movies-search-page.3c21fa1a.chunk.js.map",
+    "movies-search-page.js": "/static/js/movies-search-page.cb760327.chunk.js",
+    "movies-search-page.js.map": "/static/js/movies-search-page.cb760327.chunk.js.map",
     "main.css": "/static/css/main.a69fd79b.chunk.css",
     "main.js": "/static/js/main.d1c86ddd.chunk.js",
     "main.js.map": "/static/js/main.d1c86ddd.chunk.js.map",
     "movie-details-page.js": "/static/js/movie-details-page.42b46a5a.chunk.js",
     "movie-details-page.js.map": "/static/js/movie-details-page.42b46a5a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ce573425.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ce573425.js.map",
+    "runtime-main.js": "/static/js/runtime-main.957d4bd3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.957d4bd3.js.map",
     "static/js/6.97756ab5.chunk.js": "/static/js/6.97756ab5.chunk.js",
     "static/js/6.97756ab5.chunk.js.map": "/static/js/6.97756ab5.chunk.js.map",
     "index.html": "/index.html",
@@ -21,7 +21,7 @@
     "static/media/no_image.1d3abbb6.png": "/static/media/no_image.1d3abbb6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ce573425.js",
+    "static/js/runtime-main.957d4bd3.js",
     "static/js/6.97756ab5.chunk.js",
     "static/css/main.a69fd79b.chunk.css",
     "static/js/main.d1c86ddd.chunk.js"
